@@ -1,10 +1,12 @@
 package by.epifanova;
 
+import java.util.Scanner;
+
 public class myMoney {
     public static void main(String[] args) {
-
-
-        int m = 27;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите цифру: ");
+        int m = scanner.nextInt();
 
         {
             if (m == 1 | m % 10 == 1){

@@ -1,10 +1,18 @@
 package by.epifanova;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int day = 31;
-        int month = 12;
-        int year = 2019;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите день: ");
+        int day = scanner.nextInt();
+        System.out.print("Введите месяц: ");
+        int month = scanner.nextInt();
+        System.out.print("Введите год: ");
+        int year = scanner.nextInt();
+
 
         int numDays = 0;
         int max = 0;
