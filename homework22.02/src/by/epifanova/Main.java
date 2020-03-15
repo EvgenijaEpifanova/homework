@@ -17,7 +17,7 @@ class HelloWorld {
         hour =  (h%24);
         d=((h-hour)/24);
         week=(d%7);
-        w=((d-week)/7);
+        w=(d-week);
         System.out.println(w + " недель " + d + " дней " + hour + " часов " + min + " минут " + sec + " секунд " );
     }
 }
