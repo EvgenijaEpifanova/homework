@@ -2,7 +2,7 @@ package by.epifanova;
 
 import java.util.Scanner;
 
-public class myMoney {
+public class task5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите цифру: ");
