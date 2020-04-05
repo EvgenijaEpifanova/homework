@@ -1,5 +1,7 @@
 package by.epifanova;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class Main {
@@ -25,20 +27,28 @@ public class Main {
             case 8:
             case 10:
             case 12:
-                numDays = 31;
-                max = numDays;
-                break;
+                if (day>31) return;
+                else {
+                    numDays = 31;
+                    max = numDays;
+                    break;
+                }
 
             case 4:
             case 6:
             case 9:
             case 11:
-                numDays = 30;
-                max = numDays;
-                break;
+                if (day>30) return;
+                else {
+                    numDays = 30;
+                    max = numDays;
+                    break;
+                }
 
             case 2:
-                if (((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0))
+                if(day > 29) return;
+
+                else if (((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0))
                 {
                     numDays = 29;
                     max = numDays;
@@ -54,19 +64,14 @@ public class Main {
                 break;
         }
         System.out.println("Число дней = " + numDays);
-        if (day == max && month == 12)
-        {
+        if (day == max && month == 12){
             year = year + 1;
             day = 1;
             month = 1;
-        }
-         else if (day == max && month != 12)
-        {
-            day = 1;
-            month = month + 1;
-        }
-        else if (day != max)
-        {
+        } else if (day == max && month != 12) {
+             day = 1;
+             month = month + 1;
+        } else if (day != max) {
             day = day + 1;
         }
 
@@ -74,4 +79,5 @@ public class Main {
         System.out.println(month);
         System.out.println(year);
     }
+
 }
