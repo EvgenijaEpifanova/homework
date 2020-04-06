@@ -1,15 +1,21 @@
 package by.epifanova;
 
+import java.util.Scanner;
+
 public class task10 {
-    public static void main(String[] args) {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(" введите число");
+            int k  = (int) scanner.nextLong();
+            int x =k;
+            int sum = 0;
+            while (x != 0 ){
+                sum +=x%10;
+                x /=10;
+            }
+            System.out.println(sum);
+        }
 
 
-        int n = 325;
-        int n100 = 325 / 100;
-        int n10 = (325 - n100 * 100) / 10;
-        int n1 = (325 - n100 * 100) % 10;
-        int sum = n100 + n10 + n1;
-        System.out.println( sum);
-
-    }
 }
