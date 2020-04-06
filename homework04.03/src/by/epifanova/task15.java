@@ -2,9 +2,17 @@ package by.epifanova;
 
 public class task15 {
     public static void main(String[] args) {
+        int s=0;
 
-        int[] marks = {4,3,2,7,9,8,10,20,13};
-        int maxMark =  marks[0];
+        int marks[]= new int[9];
+        for(int i = 0;i<9;i++){
+            s++;
+            marks[i]=(int)(Math.random()*10);
+            System.out.println("Ученик № " + s +" "+ marks[i]);
+        }
+
+        int maxMark= marks[0];
+
         int i;
         int max = 0;
 
